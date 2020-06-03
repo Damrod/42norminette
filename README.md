@@ -1,6 +1,6 @@
 # 42norminette
 42 norminette syntax checker for flycheck extension for emacs. 
-Put the following code in your ~/.emacs, ~/.emacs.el, or ~/.emacs.d/init.el file
+Put the following code in your ~/.emacs, ~/.emacs.el, or ~/.emacs.d/init.el file:
 
 	(require 'flycheck)
 	(flycheck-define-checker norminette
@@ -15,5 +15,5 @@ Put the following code in your ~/.emacs, ~/.emacs.el, or ~/.emacs.d/init.el file
 					  (warning . c/c++-cppcheck)))
 	(add-to-list 'flycheck-checkers 'norminette)
 
-Download the shell script, that formats properly the norminette output for flycheck, and symlink it in some of your $PATH folders as norminette2.
+Download the "normised.sh" shell script, that formats properly the norminette output for flycheck, and symlink it in some of your $PATH folders as norminette2.
 If you want to use some flags, add them in the "normised.sh" wrapper.
