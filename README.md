@@ -6,7 +6,7 @@ Put it in your ~/.emacs, ~/.emacs.el, or ~/.emacs.d/init.el file
 	(flycheck-define-checker norminette
 	  "The 42 Norminette linter.
 	Install URL `https://rubygems.org/gems/norminette'.
-	Rules `https://github.com/MagicHatJo/-42-Norm/blob/master/norme.en.pdf'"
+	Rules `https://github.com/Damrod/42norminette/blob/master/norme.en.pdf'"
 	  :command ("norminette2" source)
 	  :error-patterns
 	  ((error line-start "Error (line " line ", col " column "): " (message) line-end))
@@ -14,3 +14,5 @@ Put it in your ~/.emacs, ~/.emacs.el, or ~/.emacs.d/init.el file
 	  :next-checkers ((error . c/c++-clang)
 					  (warning . c/c++-cppcheck)))
 	(add-to-list 'flycheck-checkers 'norminette)
+
+Download the shell script, that formats properly the norminette output for flycheck, and symlink it in some of your $PATH folders as norminette2.
