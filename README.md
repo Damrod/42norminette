@@ -1,5 +1,5 @@
 # 42norminette
-42 norminette syntax checker for flycheck extension for emacs
+42 norminette syntax checker for flycheck extension for emacs\n
 Put it in your ~/.emacs, ~/.emacs.el, or ~/.emacs.d/init.el file
 
 	(require 'flycheck)
