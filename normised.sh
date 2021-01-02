@@ -1,2 +1,2 @@
-#!/bin/sh
-/home/linuxbrew/.linuxbrew/lib/ruby/gems/2.7.0/bin/norminette $1| grep Error| sed 's@line \([0-9]\+\))@line \1, col 0)@g;s@\(^Error: \)@Error (line 0, col 0): @g'
+#!/bin/bash
+/usr/local/bin/norminette $@ | grep --invert-match "KO" | sed 's@^[^(]*(line: \([0-9]\+\), col: \([0-9]\+\)):[ |\t]*\(.*\)@Error (line \1, col \2): \3 @g'
